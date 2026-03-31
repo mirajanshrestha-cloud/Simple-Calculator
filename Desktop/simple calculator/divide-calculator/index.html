@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divide Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone-shell">
+    <section class="calculator" aria-label="Divide Calculator">
+      <div class="display-wrap">
+        <p class="display" id="display">0</p>
+      </div>
+
+      <div class="button-grid">
+        <button class="btn btn-light" data-action="clear">AC</button>
+        <button class="btn btn-light" data-action="toggle-sign">+/-</button>
+        <button class="btn btn-light" data-action="percent">%</button>
+        <button class="btn btn-operator" data-action="operator" data-value="/">÷</button>
+
+        <button class="btn btn-dark" data-action="digit" data-value="7">7</button>
+        <button class="btn btn-dark" data-action="digit" data-value="8">8</button>
+        <button class="btn btn-dark" data-action="digit" data-value="9">9</button>
+        <button class="btn btn-operator" data-action="equals">=</button>
+
+        <button class="btn btn-dark" data-action="digit" data-value="4">4</button>
+        <button class="btn btn-dark" data-action="digit" data-value="5">5</button>
+        <button class="btn btn-dark" data-action="digit" data-value="6">6</button>
+        <button class="btn btn-dark" data-action="digit" data-value="1">1</button>
+
+        <button class="btn btn-dark" data-action="digit" data-value="2">2</button>
+        <button class="btn btn-dark" data-action="digit" data-value="3">3</button>
+        <button class="btn btn-dark btn-zero" data-action="digit" data-value="0">0</button>
+        <button class="btn btn-dark" data-action="decimal" data-value=".">.</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --shell: #1c1c1e;
+  --shell-border: #3a3a3c;
+  --display-text: #f5f5f7;
+  --btn-dark: #f5f5f7;
+  --btn-dark-hover: #ffffff;
+  --btn-light: #a5a5a5;
+  --btn-light-hover: #bdbdbd;
+  --btn-operator: #ff4fa3;
+  --btn-operator-hover: #ff6db4;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 28%),
+    linear-gradient(180deg, #050505, #000000 45%, #070707);
+  font-family: "Helvetica Neue", "SF Pro Display", Arial, sans-serif;
+  color: var(--display-text);
+}
+
+.phone-shell {
+  width: min(100%, 420px);
+  padding: 24px;
+}
+
+.calculator {
+  padding: 24px 18px 20px;
+  border-radius: 36px;
+  border: 2px solid var(--shell-border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 22%),
+    var(--shell);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.display-wrap {
+  min-height: 160px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px 10px 18px;
+}
+
+.display {
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: clamp(3.4rem, 9vw, 5.5rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  height: 76px;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-dark {
+  background: var(--btn-dark);
+  color: #1a1a1a;
+}
+
+.btn-dark:hover {
+  background: var(--btn-dark-hover);
+}
+
+.btn-light {
+  background: var(--btn-light);
+  color: #111111;
+}
+
+.btn-light:hover {
+  background: var(--btn-light-hover);
+}
+
+.btn-operator {
+  background: var(--btn-operator);
+}
+
+.btn-operator:hover {
+  background: var(--btn-operator-hover);
+}
+
+.btn-zero {
+  grid-column: span 2;
+  border-radius: 999px;
+  text-align: left;
+  padding-left: 30px;
+}
